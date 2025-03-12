@@ -627,36 +627,6 @@
     font-size: 0.9rem;
   }
   
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-    .enlaces-navegacion {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--primario);
-      flex-direction: column;
-      padding: 1rem;
-      text-align: center;
-    }
-    .enlaces-navegacion.active {
-      display: flex;
-    }
-    .boton-menu-movil {
-      display: block;
-    }
-    .contenedor-prueba {
-      flex-direction: column;
-    }
-    #retroalimentacion .contenedor-retroalimentacion {
-      flex-direction: column;
-    }
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
   
   /* ============================
    ESTILOS RESPONSIVOS PARA TELÉFONOS
