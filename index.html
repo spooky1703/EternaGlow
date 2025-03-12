@@ -4,72 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EternaGlow - Tu Guía Personalizada de Skincare</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Se incluyen iconos y fuentes de Google para el diseño -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="img/eterna.ico">
-
 </head>
 <body>
+  <!-- Encabezado y navegación principal -->
   <header>
-    <nav class="container nav-container">
+    <nav class="contenedor contenedor-navegacion">
       <div class="logo">EternaGlow</div>
-      <ul class="nav-links">
+      <ul class="enlaces-navegacion">
         <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
         <li><a href="#acerca"><i class="fas fa-info-circle"></i> Acerca</a></li>
-        <li><a href="#types"><i class="fas fa-fingerprint"></i> Tipos de Piel</a></li>
-        <li><a href="#test"><i class="fas fa-clipboard-list"></i> Test de Piel</a></li>
+        <li><a href="#tipos"><i class="fas fa-fingerprint"></i> Tipos de Piel</a></li>
+        <li><a href="#prueba"><i class="fas fa-clipboard-list"></i> Test de Piel</a></li>
         <li><a href="#biblioteca"><i class="fas fa-book-open"></i> Biblioteca</a></li>
-        <li><a href="#feedback"><i class="fas fa-comments"></i> Feedback</a></li>
+        <li><a href="#retroalimentacion"><i class="fas fa-comments"></i> Retroalimentación</a></li>
       </ul>
-      <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      <button class="boton-menu-movil"><i class="fas fa-bars"></i></button>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="inicio" class="hero fadeIn">
-      <div class="container">
+    <!-- SECCIÓN INICIO (HERO) -->
+    <section id="inicio" class="hero aparecer">
+      <div class="contenedor">
         <h1>Bienvenido a EternaGlow</h1>
         <p>Descubre la rutina perfecta para tu piel con análisis y recomendaciones de expertos.</p>
-        <button
-          class="cta-btn"
-          onclick="document
-            .getElementById('test')
-            .scrollIntoView({ behavior: 'smooth' })"
-        >
+        <button class="boton-cta" onclick="document.getElementById('prueba').scrollIntoView({ behavior: 'smooth' })">
           Empieza Ahora
         </button>
       </div>
     </section>
 
-    <!-- ACERCA DE + EQUIPO -->
-    <section id="acerca" class="fadeIn">
-      <div class="container about-wrapper">
+    <!-- SECCIÓN ACERCA -->
+    <section id="acerca" class="aparecer">
+      <div class="contenedor about-wrapper">
         <!-- Bloque Acerca de -->
         <div class="about-container">
           <div class="about-image">
-            <img
-              src="img/eterna.jpeg"
-              alt="Acerca de nosotros"
-            />
+            <img src="img/eterna.jpeg" alt="Acerca de nosotros" />
           </div>
           <div class="about-content">
             <h2>Acerca de EternaGlow</h2>
             <p>
-              Combinamos tecnología y asesoramiento profesional para ofrecerte un
-              análisis único de tu piel y guiarte hacia una rutina personalizada
-              que realce tu belleza natural.
+              Combinamos tecnología y asesoramiento profesional para ofrecerte un análisis único de tu piel y guiarte hacia una rutina personalizada que realce tu belleza natural.
             </p>
           </div>
         </div>
-
         <!-- Sección Equipo (7 personas) -->
         <div class="team-section">
           <h2>Nuestro Equipo</h2>
@@ -114,48 +98,41 @@
       </div>
     </section>
 
-    <!-- TIPOS DE PIEL -->
-    <section id="types" class="fadeIn">
-      <div class="container">
-        <h2 class="section-title">
-          <i class="fas fa-fingerprint"></i> ¿Ya conoces tu tipo de piel?
-        </h2>
+    <!-- SECCIÓN TIPOS DE PIEL -->
+    <section id="tipos" class="aparecer">
+      <div class="contenedor">
+        <h2 class="section-title"><i class="fas fa-fingerprint"></i> ¿Ya conoces tu tipo de piel?</h2>
         <p class="section-description">
-          Selecciona tu tipo si ya lo conoces, o haz clic en "No lo sé" para
-          realizar nuestro test avanzado.
+          Selecciona tu tipo si ya lo conoces, o haz clic en "No lo sé" para realizar nuestro test avanzado.
         </p>
-        <div class="skin-types">
-          <div class="skin-type" onclick="showSkinTypeInfo('normal')">
-            <div class="skin-type-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="tipos-piel">
+          <div class="tipo-piel" onclick="mostrarInfoTipoPiel('normal')">
+            <div class="tipo-piel-icon"><i class="fas fa-check-circle"></i></div>
             <h3>Piel Normal</h3>
             <p>Equilibrada, sin exceso de grasa ni sequedad.</p>
           </div>
-          <div class="skin-type" onclick="showSkinTypeInfo('dry')">
-            <div class="skin-type-icon"><i class="fas fa-wind"></i></div>
+          <div class="tipo-piel" onclick="mostrarInfoTipoPiel('dry')">
+            <div class="tipo-piel-icon"><i class="fas fa-wind"></i></div>
             <h3>Piel Seca</h3>
             <p>Sensación de tirantez y posible descamación.</p>
           </div>
-          <div class="skin-type" onclick="showSkinTypeInfo('oily')">
-            <div class="skin-type-icon"><i class="fas fa-tint"></i></div>
+          <div class="tipo-piel" onclick="mostrarInfoTipoPiel('oily')">
+            <div class="tipo-piel-icon"><i class="fas fa-tint"></i></div>
             <h3>Piel Grasa</h3>
             <p>Exceso de sebo y tendencia a brillar.</p>
           </div>
-          <div class="skin-type" onclick="showSkinTypeInfo('combination')">
-            <div class="skin-type-icon"><i class="fas fa-adjust"></i></div>
+          <div class="tipo-piel" onclick="mostrarInfoTipoPiel('combination')">
+            <div class="tipo-piel-icon"><i class="fas fa-adjust"></i></div>
             <h3>Piel Mixta</h3>
             <p>Grasa en zona T, normal o seca en mejillas.</p>
           </div>
-          <div class="skin-type" onclick="showSkinTypeInfo('sensitive')">
-            <div class="skin-type-icon">
-              <i class="fas fa-exclamation-circle"></i>
-            </div>
+          <div class="tipo-piel" onclick="mostrarInfoTipoPiel('sensitive')">
+            <div class="tipo-piel-icon"><i class="fas fa-exclamation-circle"></i></div>
             <h3>Piel Sensible</h3>
             <p>Reacciona fácilmente, tendencia al enrojecimiento.</p>
           </div>
-          <div class="skin-type take-quiz" onclick="showQuiz()">
-            <div class="skin-type-icon">
-              <i class="fas fa-question-circle"></i>
-            </div>
+          <div class="tipo-piel tomar-prueba" onclick="mostrarPrueba()">
+            <div class="tipo-piel-icon"><i class="fas fa-question-circle"></i></div>
             <h3>No lo sé</h3>
             <p>Realizar test para descubrir mi tipo de piel.</p>
           </div>
@@ -163,705 +140,328 @@
       </div>
     </section>
 
-    <!-- TEST: Quiz y Resultados en horizontal -->
-<section id="test" class="fadeIn">
-    <div class="container test-container">
-      <div class="quiz-section" id="quiz">
-        <h2>Test de Piel</h2>
-        <div class="progress-bar">
-          <div class="progress-fill" style="width: 12.5%"></div>
-        </div>
-        
-        <!-- Pregunta 1 -->
-        <div class="quiz-step active" data-step="1">
-          <h3>¿Cómo se siente tu piel al tacto después de lavarla con agua?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-check-circle fa-2x"></i>
-              <h4>Suave y equilibrada</h4>
-              <p>Sensación cómoda sin problemas.</p>
-            </div>
-            <div class="skin-type-card" data-skin="dry" onclick="selectOption(this)">
-              <i class="fas fa-wind fa-2x"></i>
-              <h4>Tirante o reseca</h4>
-              <p>Sensación de estiramiento o sequedad.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-tint fa-2x"></i>
-              <h4>Grasosa o brillante</h4>
-              <p>Exceso de aceite en la superficie.</p>
-            </div>
-            <div class="skin-type-card" data-skin="combination" onclick="selectOption(this)">
-              <i class="fas fa-adjust fa-2x"></i>
-              <h4>Suave en algunas áreas y grasosa en otras</h4>
-              <p>Diferentes sensaciones según la zona.</p>
-            </div>
+    <!-- SECCIÓN PRUEBA: Test de Piel -->
+    <section id="prueba" class="aparecer">
+      <div class="contenedor contenedor-prueba">
+        <!-- Sección Examen (Quiz) -->
+        <div class="seccion-quiz" id="examen">
+          <h2>Test de Piel</h2>
+          <!-- Barra de progreso para visualizar el avance -->
+          <div class="barra-progreso">
+            <div class="progreso-llenado" style="width: 12.5%"></div>
           </div>
-        </div>
-        
-        <!-- Pregunta 2 -->
-        <div class="quiz-step" data-step="2">
-          <h3>¿Notas que tu piel tiende a ponerse roja o irritada fácilmente?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-smile fa-2x"></i>
-              <h4>No, casi nunca</h4>
-              <p>Piel resistente sin irritaciones.</p>
-            </div>
-            <div class="skin-type-card" data-skin="sensitive" onclick="selectOption(this)">
-              <i class="fas fa-exclamation-circle fa-2x"></i>
-              <h4>Sí, especialmente con ciertos productos</h4>
-              <p>Reacciona fácilmente a productos.</p>
-            </div>
-            <div class="skin-type-card" data-skin="sensitive,normal,dry,oily,combination" onclick="selectOption(this)">
-              <i class="fas fa-temperature-high fa-2x"></i>
-              <h4>A veces, dependiendo del clima</h4>
-              <p>Sensibilidad ocasional por factores externos.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Pregunta 3 -->
-        <div class="quiz-step" data-step="3">
-          <h3>¿Cómo describes el aspecto de tu piel después de varias horas sin haber aplicado productos?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-check-circle fa-2x"></i>
-              <h4>Uniforme y sin brillo</h4>
-              <p>Aspecto natural y equilibrado.</p>
-            </div>
-            <div class="skin-type-card" data-skin="dry" onclick="selectOption(this)">
-              <i class="fas fa-snowflake fa-2x"></i>
-              <h4>Mate o escamosa</h4>
-              <p>Falta de hidratación visible.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-tint fa-2x"></i>
-              <h4>Brillante o grasosa</h4>
-              <p>Exceso de sebo en toda la cara.</p>
-            </div>
-            <div class="skin-type-card" data-skin="combination" onclick="selectOption(this)">
-              <i class="fas fa-adjust fa-2x"></i>
-              <h4>Brillante en la zona T, mate en las mejillas</h4>
-              <p>Diferentes texturas según el área.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Pregunta 4 -->
-        <div class="quiz-step" data-step="4">
-          <h3>¿Con qué frecuencia ves poros visibles o puntos negros?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal,dry" onclick="selectOption(this)">
-              <i class="fas fa-check-double fa-2x"></i>
-              <h4>Raramente</h4>
-              <p>Poros pequeños y poco visibles.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-dot-circle fa-2x"></i>
-              <h4>Muy seguido en varias áreas</h4>
-              <p>Poros dilatados frecuentes.</p>
-            </div>
-            <div class="skin-type-card" data-skin="combination" onclick="selectOption(this)">
-              <i class="fas fa-map fa-2x"></i>
-              <h4>Solo en la zona T</h4>
-              <p>Poros visibles en frente, nariz y barbilla.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Pregunta 5 -->
-        <div class="quiz-step" data-step="5">
-          <h3>¿Cuál es tu experiencia con el uso de productos de cuidado facial?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-thumbs-up fa-2x"></i>
-              <h4>Me funciona de todo sin problema</h4>
-              <p>Versatilidad con diferentes productos.</p>
-            </div>
-            <div class="skin-type-card" data-skin="dry" onclick="selectOption(this)">
-              <i class="fas fa-tint-slash fa-2x"></i>
-              <h4>Muchos productos me resecan</h4>
-              <p>Tendencia a la sequedad con productos.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-oil-can fa-2x"></i>
-              <h4>Obstruyen mis poros o me hacen brillar más</h4>
-              <p>Tendencia a obstrucciones o exceso de brillo.</p>
-            </div>
-            <div class="skin-type-card" data-skin="sensitive" onclick="selectOption(this)">
-              <i class="fas fa-allergies fa-2x"></i>
-              <h4>Algunos productos irritan o me enrojecen</h4>
-              <p>Reacciones adversas frecuentes.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Pregunta 6 -->
-        <div class="quiz-step" data-step="6">
-          <h3>¿Cómo reacciona tu piel a climas extremos (calor/frío)?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-balance-scale fa-2x"></i>
-              <h4>Se adapta sin cambios notables</h4>
-              <p>Buena adaptabilidad a cambios climáticos.</p>
-            </div>
-            <div class="skin-type-card" data-skin="dry" onclick="selectOption(this)">
-              <i class="fas fa-cloud-snow fa-2x"></i>
-              <h4>Se reseca con frío o calor</h4>
-              <p>Pérdida de hidratación en climas extremos.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-hot-tub fa-2x"></i>
-              <h4>Se vuelve más grasosa con calor</h4>
-              <p>Aumento de producción sebácea con calor.</p>
-            </div>
-            <div class="skin-type-card" data-skin="sensitive" onclick="selectOption(this)">
-              <i class="fas fa-fire fa-2x"></i>
-              <h4>Se irrita o enrojece fácilmente</h4>
-              <p>Sensibilidad a cambios de temperatura.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Pregunta 7 -->
-        <div class="quiz-step" data-step="7">
-          <h3>Después de despertarte, ¿cómo describirías el aspecto de tu piel?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-equals fa-2x"></i>
-              <h4>Igual que antes de acostarme</h4>
-              <p>Estabilidad durante la noche.</p>
-            </div>
-            <div class="skin-type-card" data-skin="dry" onclick="selectOption(this)">
-              <i class="fas fa-mountain fa-2x"></i>
-              <h4>Seca o con descamación</h4>
-              <p>Deshidratación nocturna evidente.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-tint fa-2x"></i>
-              <h4>Grasosa o brillante</h4>
-              <p>Acumulación de sebo durante la noche.</p>
-            </div>
-            <div class="skin-type-card" data-skin="combination" onclick="selectOption(this)">
-              <i class="fas fa-adjust fa-2x"></i>
-              <h4>Grasosa en la zona T y seca en el resto</h4>
-              <p>Diferentes comportamientos según la zona.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Pregunta 8 -->
-        <div class="quiz-step" data-step="8">
-          <h3>¿Sientes que necesitas usar crema hidratante con frecuencia?</h3>
-          <div class="options-grid">
-            <div class="skin-type-card" data-skin="normal" onclick="selectOption(this)">
-              <i class="fas fa-clock fa-2x"></i>
-              <h4>Solo de vez en cuando</h4>
-              <p>Hidratación natural suficiente.</p>
-            </div>
-            <div class="skin-type-card" data-skin="dry" onclick="selectOption(this)">
-              <i class="fas fa-water fa-2x"></i>
-              <h4>Sí, todo el tiempo para evitar tirantez</h4>
-              <p>Necesidad constante de hidratación.</p>
-            </div>
-            <div class="skin-type-card" data-skin="oily" onclick="selectOption(this)">
-              <i class="fas fa-ban fa-2x"></i>
-              <h4>Raramente, prefiero productos matificantes</h4>
-              <p>Preferencia por controlar el exceso de sebo.</p>
-            </div>
-            <div class="skin-type-card" data-skin="combination" onclick="selectOption(this)">
-              <i class="fas fa-map-marked fa-2x"></i>
-              <h4>Solo en zonas específicas</h4>
-              <p>Hidratación selectiva según necesidad.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- RESULTADOS -->
-      <div class="result-section" id="results">
-        <div class="result-card">
-          <h2>Tu tipo de piel es: <span class="result-type"></span></h2>
-          <p class="result-description"></p>
-          <div class="routine-plan">
-            <h3>Rutina recomendada</h3>
-            <div class="routine-steps">
-              <div class="routine-step">
-                <i class="fas fa-sun"></i>
-                <h4>Mañana</h4>
-                <ul class="product-list morning-routine">
-                  <!-- Aquí se insertarán los productos según el tipo de piel -->
-                </ul>
+          
+          <!-- Preguntas del examen -->
+          <!-- Cada div con clase "paso-quiz" representa un paso (pregunta) del test -->
+          <!-- Se utiliza el atributo data-paso para identificar el número de pregunta -->
+          <!-- La clase "activo" indica el paso que se muestra actualmente -->
+          <!-- Pregunta 1 -->
+          <div class="paso-quiz activo" data-paso="1">
+            <h3>¿Cómo se siente tu piel al tacto después de lavarla con agua?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-check-circle fa-2x"></i>
+                <h4>Suave y equilibrada</h4>
+                <p>Sensación cómoda sin problemas.</p>
               </div>
-              <div class="routine-step">
-                <i class="fas fa-moon"></i>
-                <h4>Noche</h4>
-                <ul class="product-list night-routine">
-                  <!-- Aquí se insertarán los productos según el tipo de piel -->
-                </ul>
+              <div class="tarjeta-tipo-piel" data-skin="dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-wind fa-2x"></i>
+                <h4>Tirante o reseca</h4>
+                <p>Sensación de estiramiento o sequedad.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-tint fa-2x"></i>
+                <h4>Grasosa o brillante</h4>
+                <p>Exceso de aceite en la superficie.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="combination" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-adjust fa-2x"></i>
+                <h4>Suave en algunas áreas y grasosa en otras</h4>
+                <p>Diferentes sensaciones según la zona.</p>
               </div>
             </div>
           </div>
-          <button class="cta-btn restart-btn" onclick="restartQuiz()">Reiniciar Test</button>
+          
+          <!-- Pregunta 2 -->
+          <div class="paso-quiz" data-paso="2">
+            <h3>¿Notas que tu piel tiende a ponerse roja o irritada fácilmente?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-smile fa-2x"></i>
+                <h4>No, casi nunca</h4>
+                <p>Piel resistente sin irritaciones.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="sensitive" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-exclamation-circle fa-2x"></i>
+                <h4>Sí, especialmente con ciertos productos</h4>
+                <p>Reacciona fácilmente a productos.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="sensitive,normal,dry,oily,combination" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-temperature-high fa-2x"></i>
+                <h4>A veces, dependiendo del clima</h4>
+                <p>Sensibilidad ocasional por factores externos.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pregunta 3 -->
+          <div class="paso-quiz" data-paso="3">
+            <h3>¿Cómo describes el aspecto de tu piel después de varias horas sin haber aplicado productos?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-check-circle fa-2x"></i>
+                <h4>Uniforme y sin brillo</h4>
+                <p>Aspecto natural y equilibrado.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-snowflake fa-2x"></i>
+                <h4>Mate o escamosa</h4>
+                <p>Falta de hidratación visible.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-tint fa-2x"></i>
+                <h4>Brillante o grasosa</h4>
+                <p>Exceso de sebo en toda la cara.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="combination" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-adjust fa-2x"></i>
+                <h4>Brillante en la zona T, mate en las mejillas</h4>
+                <p>Diferentes texturas según el área.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pregunta 4 -->
+          <div class="paso-quiz" data-paso="4">
+            <h3>¿Con qué frecuencia ves poros visibles o puntos negros?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal,dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-check-double fa-2x"></i>
+                <h4>Raramente</h4>
+                <p>Poros pequeños y poco visibles.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-dot-circle fa-2x"></i>
+                <h4>Muy seguido en varias áreas</h4>
+                <p>Poros dilatados frecuentes.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="combination" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-map fa-2x"></i>
+                <h4>Solo en la zona T</h4>
+                <p>Poros visibles en frente, nariz y barbilla.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pregunta 5 -->
+          <div class="paso-quiz" data-paso="5">
+            <h3>¿Cuál es tu experiencia con el uso de productos de cuidado facial?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-thumbs-up fa-2x"></i>
+                <h4>Me funciona de todo sin problema</h4>
+                <p>Versatilidad con diferentes productos.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-tint-slash fa-2x"></i>
+                <h4>Muchos productos me resecan</h4>
+                <p>Tendencia a la sequedad con productos.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-oil-can fa-2x"></i>
+                <h4>Obstruyen mis poros o me hacen brillar más</h4>
+                <p>Tendencia a obstrucciones o exceso de brillo.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="sensitive" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-allergies fa-2x"></i>
+                <h4>Algunos productos irritan o me enrojecen</h4>
+                <p>Reacciones adversas frecuentes.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pregunta 6 -->
+          <div class="paso-quiz" data-paso="6">
+            <h3>¿Cómo reacciona tu piel a climas extremos (calor/frío)?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-balance-scale fa-2x"></i>
+                <h4>Se adapta sin cambios notables</h4>
+                <p>Buena adaptabilidad a cambios climáticos.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-cloud-snow fa-2x"></i>
+                <h4>Se reseca con frío o calor</h4>
+                <p>Pérdida de hidratación en climas extremos.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-hot-tub fa-2x"></i>
+                <h4>Se vuelve más grasosa con calor</h4>
+                <p>Aumento de producción sebácea con calor.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="sensitive" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-fire fa-2x"></i>
+                <h4>Se irrita o enrojece fácilmente</h4>
+                <p>Sensibilidad a cambios de temperatura.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pregunta 7 -->
+          <div class="paso-quiz" data-paso="7">
+            <h3>Después de despertarte, ¿cómo describirías el aspecto de tu piel?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-equals fa-2x"></i>
+                <h4>Igual que antes de acostarme</h4>
+                <p>Estabilidad durante la noche.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-mountain fa-2x"></i>
+                <h4>Seca o con descamación</h4>
+                <p>Deshidratación nocturna evidente.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-tint fa-2x"></i>
+                <h4>Grasosa o brillante</h4>
+                <p>Acumulación de sebo durante la noche.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="combination" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-adjust fa-2x"></i>
+                <h4>Grasosa en la zona T y seca en el resto</h4>
+                <p>Diferentes comportamientos según la zona.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pregunta 8 -->
+          <div class="paso-quiz" data-paso="8">
+            <h3>¿Sientes que necesitas usar crema hidratante con frecuencia?</h3>
+            <div class="cuadricula-opciones">
+              <div class="tarjeta-tipo-piel" data-skin="normal" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-clock fa-2x"></i>
+                <h4>Solo de vez en cuando</h4>
+                <p>Hidratación natural suficiente.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="dry" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-water fa-2x"></i>
+                <h4>Sí, todo el tiempo para evitar tirantez</h4>
+                <p>Necesidad constante de hidratación.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="oily" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-ban fa-2x"></i>
+                <h4>Raramente, prefiero productos matificantes</h4>
+                <p>Preferencia por controlar el exceso de sebo.</p>
+              </div>
+              <div class="tarjeta-tipo-piel" data-skin="combination" onclick="seleccionarOpcion(this)">
+                <i class="fas fa-map-marked fa-2x"></i>
+                <h4>Solo en zonas específicas</h4>
+                <p>Hidratación selectiva según necesidad.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-
-    <!-- BIBLIOTECA -->
-    <section id="biblioteca" class="fadeIn">
-      <div class="container">
-        <h2>Biblioteca de Consejos y Artículos</h2>
-        <div class="slider-container">
-          <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
-          <div class="slider-wrapper">
-            <!-- Slide 1 -->
-            <div class="slide">
-              <div class="article-card">
-                <img
-                  src="img/hidratar.webp"
-                  alt="Consejo 1"
-                />
-                <div class="content">
-                  <h4>Consejo para una piel radiante</h4>
-                  <p>
-                    La hidratación es clave. Descubre técnicas y productos que
-                    realzan tu luminosidad.
-                  </p>
-                  <a href="#">Leer más</a>
+        
+        <!-- SECCIÓN RESULTADO -->
+        <div class="seccion-resultado" id="resultados">
+          <div class="tarjeta-resultado">
+            <h2>Tu tipo de piel es: <span class="tipo-resultado"></span></h2>
+            <p class="descripcion-resultado"></p>
+            <div class="plan-rutina">
+              <h3>Rutina recomendada</h3>
+              <div class="pasos-rutina">
+                <div class="paso-rutina">
+                  <i class="fas fa-sun"></i>
+                  <h4>Mañana</h4>
+                  <ul class="lista-productos rutina-manana">
+                    <!-- Se insertarán productos según el tipo de piel -->
+                  </ul>
+                </div>
+                <div class="paso-rutina">
+                  <i class="fas fa-moon"></i>
+                  <h4>Noche</h4>
+                  <ul class="lista-productos rutina-noche">
+                    <!-- Se insertarán productos según el tipo de piel -->
+                  </ul>
                 </div>
               </div>
             </div>
-            <!-- Slide 2 -->
-            <div class="slide">
-              <div class="article-card">
-                <img
-                src="img/irrit.jpg"
-                alt="Consejo 2"
-                />
-                <div class="content">
-                  <h4>Rutina para piel sensible</h4>
-                  <p>
-                    Tips y productos para cuidar la piel delicada, minimizando
-                    irritaciones.
-                  </p>
-                  <a href="#">Leer más</a>
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="slide">
-              <div class="article-card">
-                <img
-                src="img/exf.jpeg"
-                alt="Consejo 3"
-                />
-                <div class="content">
-                  <h4>Exfoliación perfecta</h4>
-                  <p>
-                    Aprende a exfoliar tu piel sin dañarla, removiendo células
-                    muertas.
-                  </p>
-                  <a href="#">Leer más</a>
-                </div>
-              </div>
-            </div>
+            <button class="boton-cta reiniciar-btn" onclick="reiniciarExamen()">Reiniciar Prueba</button>
           </div>
-          <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
 
-    <!-- FEEDBACK: Testimonios y Contacto (fondo completo horizontal) -->
-    <section id="feedback" class="fadeIn">
-      <div class="feedback-container">
-        <div class="testimonial">
+    <!-- SECCIÓN BIBLIOTECA -->
+    <section id="biblioteca" class="aparecer">
+      <div class="contenedor">
+        <h2>Biblioteca de Consejos y Artículos</h2>
+        <div class="contenedor-slider">
+          <button class="boton-slider anterior"><i class="fas fa-chevron-left"></i></button>
+          <div class="envoltura-slider">
+            <!-- Diapositiva 1 -->
+            <div class="diapositiva">
+              <div class="tarjeta-articulo">
+                <img src="img/hidratar.webp" alt="Consejo 1" />
+                <div class="contenido-articulo">
+                  <h4>Consejo para una piel radiante</h4>
+                  <p>La hidratación es clave. Descubre técnicas y productos que realzan tu luminosidad.</p>
+                  <a href="#">Leer más</a>
+                </div>
+              </div>
+            </div>
+            <!-- Diapositiva 2 -->
+            <div class="diapositiva">
+              <div class="tarjeta-articulo">
+                <img src="img/irrit.jpg" alt="Consejo 2" />
+                <div class="contenido-articulo">
+                  <h4>Rutina para piel sensible</h4>
+                  <p>Tips y productos para cuidar la piel delicada, minimizando irritaciones.</p>
+                  <a href="#">Leer más</a>
+                </div>
+              </div>
+            </div>
+            <!-- Diapositiva 3 -->
+            <div class="diapositiva">
+              <div class="tarjeta-articulo">
+                <img src="img/exf.jpeg" alt="Consejo 3" />
+                <div class="contenido-articulo">
+                  <h4>Exfoliación perfecta</h4>
+                  <p>Aprende a exfoliar tu piel sin dañarla, removiendo células muertas.</p>
+                  <a href="#">Leer más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="boton-slider siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN RETROALIMENTACIÓN -->
+    <section id="retroalimentacion" class="aparecer">
+      <div class="contenedor contenedor-retroalimentacion">
+        <div class="testimonio">
           <h2>Testimonios</h2>
-          <p>
-            "SkinReveal transformó mi rutina de cuidado. Las recomendaciones son
-            precisas y realmente efectivas."
-          </p>
-          <h4>María López</h4>
-          <p>
-            "Con SkinReveal descubrí los productos ideales para mi piel mixta.
-            ¡Totalmente recomendado!"
-          </p>
+          <p>"EternaGlow transformó mi rutina de cuidado. Las recomendaciones son precisas y realmente efectivas."</p>
+          <h4>Alonso Mota</h4>
+          <p>"Con EternaGlow descubrí los productos ideales para mi piel mixta. ¡Totalmente recomendado!"</p>
           <h4>Carlos Pérez</h4>
         </div>
-        <div class="contact">
+        <div class="contacto">
           <h2>Contacto</h2>
-          <p>
-            ¿Tienes preguntas o necesitas asesoría? Escríbenos a
-            <a href="mailto:info@skinreveal.com">info@EternaGlow.com</a> y te
-            responderemos a la brevedad.
-          </p>
+          <p>¿Tienes preguntas o necesitas asesoría? Escríbenos a <a href="mailto:info@EternaGlow.com">info@EternaGlow.com</a> y te responderemos a la brevedad.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
+    <div class="contenedor">
       <p>&copy; 2025 EternaGlow. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <script>
-    // Variables para el Quiz
-    const quizSteps = document.querySelectorAll('.quiz-step');
-    let currentStep = 0;
-    const score = { 
-      normal: 0, 
-      oily: 0, 
-      sensitive: 0, 
-      combination: 0, 
-      dry: 0 
-    };
-  
-    // Función para seleccionar opción y avanzar
-    function selectOption(element) {
-      const skinTypes = element.dataset.skin.split(',');
-      
-      // Agregamos puntos a cada tipo de piel indicado
-      skinTypes.forEach(skinType => {
-        if (score.hasOwnProperty(skinType.trim())) {
-          // Damos diferente peso según la pregunta
-          // Las preguntas más determinantes tienen más peso
-          let weight = 1;
-          const currentQuestion = currentStep + 1;
-          
-          // Preguntas sobre características físicas tienen más peso
-          if ([1, 3, 4, 7].includes(currentQuestion)) {
-            weight = 2;
-          }
-          
-          score[skinType.trim()] += weight;
-        }
-      });
-      
-      nextStep();
-    }
-  
-    // Función para avanzar al siguiente paso
-    function nextStep() {
-      if (currentStep < quizSteps.length - 1) {
-        quizSteps[currentStep].classList.remove('active');
-        currentStep++;
-        quizSteps[currentStep].classList.add('active');
-        updateProgress(((currentStep + 1) / quizSteps.length) * 100);
-      } else {
-        calculateResult();
-      }
-    }
-  
-    // Actualizar barra de progreso
-    function updateProgress(percentage) {
-      document.querySelector('.progress-fill').style.width = percentage + '%';
-    }
-  
-    // Calcular resultado basado en puntuaciones
-    function calculateResult() {
-      // Ordenamos los tipos de piel por puntuación
-      const skinTypes = Object.keys(score).sort((a, b) => score[b] - score[a]);
-      
-      // El primer tipo es el dominante
-      const resultType = skinTypes[0];
-      
-      // Comprobamos si hay un empate o un resultado cercano
-      const isClose = (score[skinTypes[0]] - score[skinTypes[1]]) <= 2;
-      
-      let finalType = resultType;
-      
-      // Si es un resultado cercano, podríamos tener piel mixta o combinación especial
-      if (isClose) {
-        // Si los dos tipos principales son graso y seco, es piel combinada
-        if ((skinTypes[0] === 'oily' && skinTypes[1] === 'dry') || 
-            (skinTypes[0] === 'dry' && skinTypes[1] === 'oily')) {
-          finalType = 'combination';
-        }
-        
-        // Si uno de los tipos principales es sensible, considerarlo
-        if (skinTypes[0] === 'sensitive' || skinTypes[1] === 'sensitive') {
-          // Añadir sensible como cualificador
-          if (finalType !== 'sensitive') {
-            finalType = `${finalType}-sensitive`;
-          }
-        }
-      }
-      
-      // Mostrar resultado
-      displayResult(finalType);
-    }
-  
-    // Mostrar el resultado final
-    function displayResult(skinType) {
-      // Descripción de cada tipo de piel
-      const skinDescriptions = {
-        'normal': 'Tu piel está bien equilibrada, ni demasiado grasa ni demasiado seca. Mantiene un buen nivel de hidratación y raramente presenta problemas.',
-        'dry': 'Tu piel tiende a sentirse tirante y puede presentar descamación. Necesita hidratación constante y productos nutritivos.',
-        'oily': 'Tu piel produce exceso de sebo, lo que resulta en brillo y posible tendencia al acné. Necesita limpieza adecuada y productos no comedogénicos.',
-        'combination': 'Tu piel presenta diferentes características según la zona: típicamente más grasa en la zona T (frente, nariz, barbilla) y normal o seca en las mejillas.',
-        'sensitive': 'Tu piel reacciona fácilmente a productos o factores externos, con tendencia al enrojecimiento o irritación. Necesita productos suaves y sin fragancias.',
-        'dry-sensitive': 'Tu piel es seca y además sensible. Necesita hidratación intensa pero con productos muy suaves y sin ingredientes irritantes.',
-        'oily-sensitive': 'Tu piel es grasa pero también sensible. Requiere un equilibrio entre controlar el exceso de sebo sin usar productos agresivos.',
-        'combination-sensitive': 'Tu piel es mixta y sensible. Necesita cuidados específicos para cada zona y productos que no irriten.'
-      };
-      
-      // Rutinas recomendadas por la mañana
-      const morningRoutines = {
-        'normal': [
-          'Limpiador suave',
-          'Tónico hidratante',
-          'Sérum con antioxidantes',
-          'Crema hidratante ligera',
-          'Protector solar SPF 30-50'
-        ],
-        'dry': [
-          'Limpiador cremoso sin jabón',
-          'Tónico sin alcohol',
-          'Sérum con ácido hialurónico',
-          'Crema hidratante rica',
-          'Protector solar SPF 30-50'
-        ],
-        'oily': [
-          'Gel limpiador',
-          'Tónico astringente suave',
-          'Sérum con niacinamida',
-          'Gel hidratante oil-free',
-          'Protector solar oil-free SPF 30-50'
-        ],
-        'combination': [
-          'Gel limpiador suave',
-          'Tónico balanceador',
-          'Sérum con niacinamida',
-          'Hidratante en gel para zona T, crema para mejillas',
-          'Protector solar SPF 30-50'
-        ],
-        'sensitive': [
-          'Limpiador suave sin fragancias',
-          'Agua termal calmante',
-          'Sérum calmante (aloe vera, centella asiática)',
-          'Crema hidratante para piel sensible',
-          'Protector solar mineral SPF 30-50'
-        ],
-        'dry-sensitive': [
-          'Limpiador cremoso sin fragancias',
-          'Agua termal calmante',
-          'Sérum hidratante con aloe vera',
-          'Crema rica para piel sensible',
-          'Protector solar mineral SPF 30-50'
-        ],
-        'oily-sensitive': [
-          'Gel limpiador suave sin sulfatos',
-          'Agua termal calmante',
-          'Sérum con niacinamida suave',
-          'Gel hidratante calmante',
-          'Protector solar mineral oil-free SPF 30-50'
-        ],
-        'combination-sensitive': [
-          'Limpiador suave sin fragancias',
-          'Agua termal calmante',
-          'Sérum calmante multibeneficio',
-          'Hidratante en gel para zona T, crema suave para mejillas',
-          'Protector solar mineral SPF 30-50'
-        ]
-      };
-      
-      // Rutinas recomendadas por la noche
-      const nightRoutines = {
-        'normal': [
-          'Desmaquillante adecuado',
-          'Limpiador suave',
-          'Tónico hidratante',
-          'Sérum con retinol (2-3 veces por semana)',
-          'Crema hidratante nutritiva'
-        ],
-        'dry': [
-          'Aceite o bálsamo desmaquillante',
-          'Limpiador cremoso',
-          'Tónico hidratante',
-          'Sérum con ácido hialurónico',
-          'Crema o aceite facial rico'
-        ],
-        'oily': [
-          'Desmaquillante oil-free',
-          'Gel limpiador',
-          'Tónico con BHA (ácido salicílico)',
-          'Sérum con niacinamida o ácido salicílico',
-          'Gel hidratante ligero'
-        ],
-        'combination': [
-          'Desmaquillante micelar',
-          'Gel limpiador suave',
-          'Tónico balanceador',
-          'Tratamiento con AHA/BHA en zona T',
-          'Hidratante ligero o crema según zona'
-        ],
-        'sensitive': [
-          'Desmaquillante suave sin alcohol',
-          'Limpiador suave sin fragancias',
-          'Agua termal calmante',
-          'Sérum reparador de barrera cutánea',
-          'Crema calmante sin fragancias'
-        ],
-        'dry-sensitive': [
-          'Aceite desmaquillante suave',
-          'Limpiador cremoso sin fragancias',
-          'Agua termal calmante',
-          'Sérum con ceramidas',
-          'Crema rica reparadora nocturna'
-        ],
-        'oily-sensitive': [
-          'Desmaquillante suave oil-free',
-          'Gel limpiador sin sulfatos',
-          'Agua termal calmante',
-          'Sérum ligero con azelaic acid',
-          'Gel hidratante calmante'
-        ],
-        'combination-sensitive': [
-          'Desmaquillante micelar suave',
-          'Limpiador suave sin fragancias',
-          'Agua termal calmante',
-          'Sérum balanceador suave',
-          'Hidratante ligero adaptado a cada zona'
-        ]
-      };
-      
-      // Actualizar la interfaz con el resultado
-      document.querySelector('.result-type').textContent = formatSkinType(skinType);
-      document.querySelector('.result-description').textContent = skinDescriptions[skinType] || 
-        "Tu piel tiene características únicas. Te recomendamos una rutina personalizada basada en tus necesidades específicas.";
-      
-      // Limpiar y actualizar las listas de productos
-      const morningList = document.querySelector('.morning-routine');
-      const nightList = document.querySelector('.night-routine');
-      
-      morningList.innerHTML = '';
-      nightList.innerHTML = '';
-      
-      // Añadir productos para rutina de mañana
-      const morningProducts = morningRoutines[skinType] || morningRoutines['normal'];
-      morningProducts.forEach(product => {
-        const li = document.createElement('li');
-        li.textContent = product;
-        morningList.appendChild(li);
-      });
-      
-      // Añadir productos para rutina de noche
-      const nightProducts = nightRoutines[skinType] || nightRoutines['normal'];
-      nightProducts.forEach(product => {
-        const li = document.createElement('li');
-        li.textContent = product;
-        nightList.appendChild(li);
-      });
-      
-      // Ocultar quiz y mostrar resultados
-      document.getElementById('quiz').style.display = 'none';
-      document.getElementById('results').style.display = 'flex';
-      updateProgress(100);
-    }
-  
-    // Formatear el tipo de piel para mostrar
-    function formatSkinType(skinType) {
-      const typeMap = {
-        'normal': 'Normal',
-        'dry': 'Seca',
-        'oily': 'Grasa',
-        'combination': 'Mixta',
-        'sensitive': 'Sensible',
-        'dry-sensitive': 'Seca y Sensible',
-        'oily-sensitive': 'Grasa y Sensible',
-        'combination-sensitive': 'Mixta y Sensible'
-      };
-      
-      return typeMap[skinType] || capitalize(skinType);
-    }
-  
-    // Función para reiniciar el quiz
-    function restartQuiz() {
-      // Reiniciar puntuaciones
-      Object.keys(score).forEach(key => {
-        score[key] = 0;
-      });
-      
-      // Volver al primer paso
-      quizSteps.forEach(step => step.classList.remove('active'));
-      quizSteps[0].classList.add('active');
-      currentStep = 0;
-      
-      // Actualizar progreso
-      updateProgress(12.5); // 1/8 * 100
-      
-      // Mostrar quiz y ocultar resultados
-      document.getElementById('quiz').style.display = 'block';
-      document.getElementById('results').style.display = 'none';
-    }
-  
-    // Función auxiliar para capitalizar texto
-    function capitalize(str) {
-      return str.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-    }
-  
-    // Slider en Biblioteca
-    // Slider en Biblioteca
-const sliderWrapper = document.querySelector('.slider-wrapper');
-const slides = document.querySelectorAll('.slide');
-let sliderIndex = 0;
-
-function updateSlider() {
-  // Remover clase active de todos los slides
-  slides.forEach(slide => slide.classList.remove('active'));
-  
-  // Agregar clase active al slide actual
-  slides[sliderIndex].classList.add('active');
-  
-  // Mover el wrapper
-  sliderWrapper.style.transform = `translateX(-${sliderIndex * 100}%)`;
-}
-
-if (sliderWrapper && slides.length > 0) {
-  // Inicializar primer slide
-  slides[0].classList.add('active');
-  
-  document.querySelector('.slider-btn.next').addEventListener('click', () => {
-    sliderIndex = (sliderIndex + 1) % slides.length;
-    updateSlider();
-  });
-
-  document.querySelector('.slider-btn.prev').addEventListener('click', () => {
-    sliderIndex = (sliderIndex - 1 + slides.length) % slides.length;
-    updateSlider();
-  });
-}
-    // Funciones para la sección Tipos de Piel
-    function showSkinTypeInfo(type) {
-      const info = {
-        normal:
-          'La piel normal es equilibrada y requiere cuidados básicos para mantener su vitalidad.',
-        dry: 'La piel seca tiende a sentirse tirante y puede descamarse; necesita hidratación profunda y productos suaves.',
-        oily: 'La piel grasa produce más sebo y suele brillar; se recomienda limpieza regular y productos matificantes.',
-        combination:
-          'La piel mixta presenta zonas grasas y secas; se recomienda un cuidado diferenciado en cada área.',
-        sensitive:
-          'La piel sensible reacciona con facilidad a factores externos, por lo que se deben usar productos hipoalergénicos.'
-      };
-      alert(info[type] || 'Información no disponible.');
-    }
-  
-    // Mostrar el quiz desde la sección Tipos de Piel
-    function showQuiz() {
-      document.getElementById('test').scrollIntoView({ behavior: 'smooth' });
-    }
-  
-    // Menú móvil
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    if (mobileMenuBtn) {
-      mobileMenuBtn.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.toggle('active');
-      });
-    }
-  </script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
