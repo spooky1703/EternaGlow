@@ -397,9 +397,19 @@ function mostrarPrueba() {
  * Función para controlar el menú móvil.
  * Alterna la visibilidad de los enlaces de navegación al hacer clic en el botón.
  */
-const botonMenuMovil = document.querySelector('.boton-menu-movil');
-if (botonMenuMovil) {
-  botonMenuMovil.addEventListener('click', () => {
-    document.querySelector('.enlaces-navegacion').classList.toggle('active');
+// Seleccionamos el botón y el menú
+const botonMenu = document.querySelector('.boton-menu-movil');
+const enlacesNavegacion = document.querySelector('.enlaces-navegacion');
+
+// Evento para abrir/cerrar el menú al hacer clic en el botón
+botonMenu.addEventListener('click', () => {
+  enlacesNavegacion.classList.toggle('activo');
+});
+
+// Cerrar el menú cuando se haga clic en un enlace
+document.querySelectorAll('.enlaces-navegacion a').forEach(enlace => {
+  enlace.addEventListener('click', () => {
+    enlacesNavegacion.classList.remove('activo');
   });
-}
+});
+
