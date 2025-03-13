@@ -631,7 +631,7 @@
   /* ============================
    ESTILOS RESPONSIVOS PARA TELÉFONOS
    ============================ */
-@media (max-width: 600px) {
+   @media (max-width: 600px) {
     /* Ajuste del contenedor general */
     .contenedor {
       padding: 0 1rem;
@@ -639,8 +639,19 @@
     
     /* Encabezado y menú de navegación */
     header {
+      position: fixed;  /* Fijamos el header para que siempre esté visible */
+      top: 0;
+      left: 0;
+      width: 100%;
       padding: 0.8rem 1rem;
+      z-index: 1000;
     }
+    /* Agregamos un espacio superior en el body para que el contenido no quede tapado */
+    body {
+      padding-top: 60px; /* Ajusta según la altura de tu header */
+    }
+    
+    /* Ocultamos el menú por defecto y lo mostramos cuando se active */
     .enlaces-navegacion {
       flex-direction: column;
       position: absolute;
@@ -650,7 +661,12 @@
       background: var(--primario);
       padding: 1rem 0;
       text-align: center;
+      display: none; /* Oculto por defecto */
     }
+    .enlaces-navegacion.activo {
+      display: flex;  /* Se mostrará cuando se active (JS) */
+    }
+    
     .enlaces-navegacion li {
       margin: 0.5rem 0;
     }
@@ -658,7 +674,7 @@
       display: block;
     }
     
-    /* Reducir tamaños de fuente en el HERO */
+    /* Ajustes en el HERO */
     .hero h1 {
       font-size: 2.2rem;
     }
@@ -669,16 +685,33 @@
       padding: 0.6rem 1.5rem;
       font-size: 1rem;
     }
-    
-    /* Ajuste para la sección ACERCA y EQUIPO */
+    .enlaces-navegacion {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      
+      .enlaces-navegacion.activo {
+        max-height: 500px; /* Ajusta este valor según la cantidad de enlaces */
+      }
+      
+    /* Ajustes en la sección ACERCA y EQUIPO */
     .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-    .team-grid {
-      flex-direction: column;
-      gap: 1rem;
-    }
+        flex-direction: column;
+        text-align: center;
+      }
+      .team-grid {
+        /* Usamos grid para mostrar dos integrantes por fila */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        justify-items: center;
+      }
+      .team-member {
+        /* Ajustamos el ancho para que se adapte a la celda del grid */
+        width: 100%;
+        max-width: 200px; /* Puedes ajustar este valor si lo requieres */
+      }
     
     /* Ajuste en la sección del TEST (Examen) */
     .contenedor-prueba {
@@ -692,8 +725,6 @@
     .barra-progreso {
       width: 90%;
     }
-    
-    /* Opciones del examen */
     .cuadricula-opciones {
       grid-template-columns: 1fr;
     }
@@ -702,12 +733,30 @@
       font-size: 0.9rem;
     }
     
-    /* Ajustes en la sección de BIBLIOTECA (Slider) */
-    .diapositiva {
+    /* Ajustes en la sección Biblioteca (Slider) */
+    .contenedor-slider {
       padding: 0 10px;
     }
+    .envoltura-slider {
+      width: 100%;
+    }
+    .diapositiva {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 5px;
+    }
+    /* Para que las imágenes se adapten sin altura fija */
+    .tarjeta-articulo img {
+      height: auto;
+    }
+    /* Reducir tamaño de los botones del slider */
+    .boton-slider {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+    }
     
-    /* Retroalimentación y Contacto */
+    /* Retroalimentación y Contacto: se agrupan en columna */
     #retroalimentacion .contenedor-retroalimentacion {
       flex-direction: column;
     }
@@ -717,4 +766,5 @@
       padding: 2rem 1rem;
     }
   }
+  
   
