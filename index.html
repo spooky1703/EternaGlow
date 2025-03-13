@@ -20,7 +20,7 @@
         <li><a href="#acerca"><i class="fas fa-info-circle"></i> Acerca</a></li>
         <li><a href="#tipos"><i class="fas fa-fingerprint"></i> Tipos de Piel</a></li>
         <li><a href="#prueba"><i class="fas fa-clipboard-list"></i> Test de Piel</a></li>
-        <li><a href="#biblioteca"><i class="fas fa-book-open"></i> Biblioteca</a></li>
+        <li><a href="#productos"><i class="fas fa-book-open"></i> productos</a></li>
         <li><a href="#retroalimentacion"><i class="fas fa-comments"></i> Retroalimentación</a></li>
       </ul>
       <button class="boton-menu-movil"><i class="fas fa-bars"></i></button>
@@ -54,47 +54,7 @@
             </p>
           </div>
         </div>
-        <!-- Sección Equipo (7 personas) -->
-        <div class="team-section">
-          <h2>Nuestro Equipo</h2>
-          <div class="team-grid">
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 1" />
-              <h3>Oscar</h3>
-              <p>Fundador</p>
-            </div>
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 2" />
-              <h3>Alejandro</h3>
-              <p>Desarrollador</p>
-            </div>
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 3" />
-              <h3>Angel</h3>
-              <p>Diseñador</p>
-            </div>
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 4" />
-              <h3>Uriel</h3>
-              <p>Especialista en Marketing</p>
-            </div>
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 5" />
-              <h3>Emiliano</h3>
-              <p>Soporte Técnico</p>
-            </div>
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 6" />
-              <h3>Amaurany</h3>
-              <p>Experta en skincare</p>
-            </div>
-            <div class="team-member">
-              <img src="img/hombre.jpg" alt="Miembro 7" />
-              <h3>Itzamar</h3>
-              <p>Experta en skincare</p>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
 
@@ -393,91 +353,360 @@
     </section>
 
   <!-- SECCIÓN PRODUCTOS DE SKINCARE POR CATEGORÍA -->
-<!-- SECCIÓN DE PRODUCTOS DE SKINCARE (SLIDER COMBINADO) -->
-<!-- SECCIÓN DE PRODUCTOS DE SKINCARE (SLIDER COMBINADO) -->
-<section id="productos" class="aparecer slider-seccion">
+<!-- SECCIÓN PRODUCTOS -->
+<section id="productos" class="aparecer">
     <div class="contenedor">
-      <h2>Productos de Skincare</h2>
-      <div class="contenedor-slider" id="productos-slider">
-        <button class="boton-slider anterior"><i class="fas fa-chevron-left"></i></button>
-        <div class="envoltura-slider">
-          <!-- Diapositiva 1: Piel Normal -->
-          <div class="diapositiva activo">
-            <div class="leyenda">Piel Normal</div>
-            <div class="grupo-slider">
-              <!-- Producto 1 -->
-              <div class="tarjeta-producto">
-                <img src="img/normal1.jpg" alt="Producto 1 para Piel Normal">
-                <div class="contenido-producto">
-                  <h4>Producto A</h4>
-                  <p>Equilibra y mantiene la salud natural de tu piel.</p>
-                  <a href="#productoA">Ver Producto</a>
+      <h2>Productos Recomendados</h2>
+      
+      <!-- Selector de tipo de piel -->
+      <div class="filtros-piel">
+        <button class="boton-filtro activo" data-piel="grasa">Piel Grasa</button>
+        <button class="boton-filtro" data-piel="mixta">Piel Mixta</button>
+        <button class="boton-filtro" data-piel="seca">Piel Seca</button>
+      </div>
+  
+      <!-- Contenedor de categorías -->
+      <div class="categorias-productos">
+  
+        <!-- PIEL GRASA -->
+        <div class="categoria-piel activo" data-categoria="grasa">
+          <h3>Piel Grasa</h3>
+          
+          <!-- Exfoliantes/Limpiadores -->
+          <div class="slider-container">
+            <h4>Exfoliantes o Limpiadores</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                <!-- Productos -->
+                <div class="tarjeta-producto">
+                  <img src="img/limpiador.jpg" alt="COSRX Gel Limpiador">
+                  <div class="contenido-producto">
+                    <h4>COSRX Gel Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/cosrx-gel-limpiador-con-ph-bajo-good-morning-150ml/info.html/pid.1052684732" target="_blank">Ver Producto</a>
+                  </div>
                 </div>
-              </div>
-              <!-- Producto 2 -->
-              <div class="tarjeta-producto">
-                <img src="img/normal2.jpg" alt="Producto 2 para Piel Normal">
-                <div class="contenido-producto">
-                  <h4>Producto B</h4>
-                  <p>Fórmula ligera ideal para el cuidado diario.</p>
-                  <a href="#productoB">Ver Producto</a>
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/ginseg.webp" alt="Beauty of Joseon Aceite Limpiador">
+                  <div class="contenido-producto">
+                    <h4>Beauty of Joseon Aceite Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/beauty-of-joseon-ginseng-cleansing-oil-2024-version-210ml/info.html/pid.1128164794" target="_blank">Ver Producto</a>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- Diapositiva 2: Piel Seca -->
-          <div class="diapositiva">
-            <div class="leyenda">Piel Seca</div>
-            <div class="grupo-slider">
-              <div class="tarjeta-producto">
-                <img src="img/seca1.jpg" alt="Producto 1 para Piel Seca">
-                <div class="contenido-producto">
-                  <h4>Producto C</h4>
-                  <p>Hidratación intensa para combatir la sequedad.</p>
-                  <a href="#productoC">Ver Producto</a>
-                </div>
-              </div>
-              <div class="tarjeta-producto">
-                <img src="img/seca2.jpg" alt="Producto 2 para Piel Seca">
-                <div class="contenido-producto">
-                  <h4>Producto D</h4>
-                  <p>Nutre y repara la barrera de hidratación.</p>
-                  <a href="#productoD">Ver Producto</a>
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/skin1004-espuma.webp" alt="Skin1004 Espuma Limpiadora">
+                  <div class="contenido-producto">
+                    <h4>Skin1004 Espuma Limpiadora</h4>
+                    <a href="https://www.yesstyle.com/es/skin-1004-espuma-de-ampolla-de-centella-madagascar-centella-ampoule/info.html/pid.1077182367" target="_blank">Ver Producto</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Diapositiva 3: Piel Grasa -->
-          <div class="diapositiva">
-            <div class="leyenda">Piel Grasa</div>
-            <div class="grupo-slider">
-              <div class="tarjeta-producto">
-                <img src="img/grasa1.jpg" alt="Producto 1 para Piel Grasa">
-                <div class="contenido-producto">
-                  <h4>Producto E</h4>
-                  <p>Controla el exceso de sebo y reduce el brillo.</p>
-                  <a href="#productoE">Ver Producto</a>
+  
+          <!-- Cremas/Serums -->
+          <div class="slider-container">
+            <h4>Cremas/Serums</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                
+                
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/skin1004-tonico.webp" alt="Skin1004 Tónico">
+                  <div class="contenido-producto">
+                    <h4>Skin1004 Tónico</h4>
+                    <a href="https://www.yesstyle.com/es/skin-1004-t%C3%B3nico-madagascar/info.html/pid.1077182357" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/joseon-serum.webp" alt="Beauty of Joseon Sérum">
+                  <div class="contenido-producto">
+                    <h4>Beauty of Joseon Sérum</h4>
+                    <a href="https://www.yesstyle.com/es/beauty-of-joseon-s%C3%A9rum/info.html/pid.1114255822" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/celimax-pad.webp" alt="Celimax Pad Exfoliante">
+                  <div class="contenido-producto">
+                    <h4>Celimax Pad Exfoliante</h4>
+                    <a href="https://www.yesstyle.com/es/celimax-pad-exfoliante-jiwoogae-heartleaf-bha-peeling-pad-60-pcs/info.html/pid.1075776746" target="_blank">Ver Producto</a>
+                  </div>
                 </div>
               </div>
-              <div class="tarjeta-producto">
-                <img src="img/grasa2.jpg" alt="Producto 2 para Piel Grasa">
-                <div class="contenido-producto">
-                  <h4>Producto F</h4>
-                  <p>Ayuda a purificar y equilibrar la piel.</p>
-                  <a href="#productoF">Ver Producto</a>
+            </div>
+          </div>
+  
+          <!-- Protectores Solares -->
+          <div class="slider-container">
+            <h4>Protectores Solares</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/skin1004-protectos.webp" alt="Skin1004 Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Skin1004 Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/skin-1004-protector-solar-en-barra-madagascar-centella-hyalu-cica/info.html/pid.1124363689" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/joseon-protector.webp" alt="Beauty of Joseon Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Beauty of Joseon Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/beauty-of-joseon-protector-solar-con-probioticos-relief-sun-mini-10ml/info.html/pid.1118873672" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/grasa/anua-serum.webp" alt="Anua Sérum">
+                  <div class="contenido-producto">
+                    <h4>Anua Sérum</h4>
+                    <a href="https://www.yesstyle.com/es/anua-s%C3%A9rum-con-niacinamida/info.html/pid.1132942898" target="_blank">Ver Producto</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <button class="boton-slider siguiente"><i class="fas fa-chevron-right"></i></button>
+  
+        <!-- PIEL MIXTA -->
+        <div class="categoria-piel" data-categoria="mixta">
+          <h3>Piel Mixta</h3>
+          
+          <!-- Exfoliantes/Limpiadores -->
+          <div class="slider-container">
+            <h4>Exfoliantes o Limpiadores</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/skin1004-aceite.webp" alt="Skin1004 Aceite Limpiador">
+                  <div class="contenido-producto">
+                    <h4>Skin1004 Aceite Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/skin-1004-aceite-limpiador/info.html/pid.1077182361" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/XXL_p0180240777.webp" alt="Skin1004 Espuma Limpiadora">
+                  <div class="contenido-producto">
+                    <h4>Skin1004 Espuma Limpiadora</h4>
+                    <a href="https://www.yesstyle.com/es/skin-1004-espuma-limpiadora-madagascar-centella-poremizing-deep-cleansing/info.html/pid.1116073910" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/instree-gel.webp" alt="Isntree Gel Limpiador">
+                  <div class="contenido-producto">
+                    <h4>Isntree Gel Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/isntree-gel-limpiador/info.html/pid.1114914570" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Cremas/Serums -->
+          <div class="slider-container">
+            <h4>Cremas/Serums</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/L_p0056482132.webp" alt="COSRX Tónico">
+                  <div class="contenido-producto">
+                    <h4>COSRX Tónico</h4>
+                    <a href="https://www.yesstyle.com/es/cosrx-t%C3%B3nico-de-tratamiento/info.html/pid.1052684721" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+               
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/XXL_p0091926049.webp" alt="Isntree Tónico">
+                  <div class="contenido-producto">
+                    <h4>Isntree Tónico</h4>
+                    <a href="https://www.yesstyle.com/es/isntree-t%C3%B3nico-con-t%C3%A9/info.html/pid.1114914568" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/XXL_p0157080833.webp" alt="Benton Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Benton Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/benton-protector-solar-vegano-air-fit-uv-defense-sun-cream-50-ml/info.html/pid.1104802161" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Protectores Solares -->
+          <div class="slider-container">
+            <h4>Protectores Solares</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/XXL_p0211178027.webp" alt="Beauty of Joseon Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Beauty of Joseon Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/beauty-of-joseon-protector-solar-relief-sun-aqua-fresh-50ml/info.html/pid.1130222654" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/XXL_p0185161114.webp" alt="Mixsoon Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Mixsoon Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/mixsoon-protector-solar-centella-sun-cream-50g/info.html/pid.1118209026" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/mixta/instree-gel.webp"COSRX Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>COSRX Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/cosrx-protector-solar-ultra-light-invisible-sunscreen-50ml/info.html/pid.1128819058" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- PIEL SECA -->
+        <div class="categoria-piel" data-categoria="seca">
+          <h3>Piel Seca</h3>
+          
+          <!-- Exfoliantes/Limpiadores -->
+          <div class="slider-container">
+            <h4>Exfoliantes o Limpiadores</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0092908725.webp" alt="Iunik Aceite Limpiador">
+                  <div class="contenido-producto">
+                    <h4>Iunik Aceite Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/iunik-aceite-limpiador/info.html/pid.1068351702" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0206012611.webp" alt="Anua Aceite Limpiador">
+                  <div class="contenido-producto">
+                    <h4>Anua Aceite Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/anua-aceite-limpiador-heartleaf-pore-control-cleansing-oil-200ml/info.html/pid.1118224587" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0107035200.webp" alt="Round Lab Limpiador">
+                  <div class="contenido-producto">
+                    <h4>Round Lab Limpiador</h4>
+                    <a href="https://www.yesstyle.com/es/round-lab-limpiador-facial-1025-dokdo-cleanser-150ml/info.html/pid.1074113181" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Cremas/Serums -->
+          <div class="slider-container">
+            <h4>Cremas/Serums</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0187761447.webp" alt="Mixsoon Esencia">
+                  <div class="contenido-producto">
+                    <h4>Mixsoon Esencia</h4>
+                    <a href="https://www.yesstyle.com/es/mixsoon-esencia-facial-soondy-centella-asiatica-essence-50ml/info.html/pid.1119321975" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0139957919.webp" alt="Torriden Sérum">
+                  <div class="contenido-producto">
+                    <h4>Torriden Sérum</h4>
+                    <a href="https://www.yesstyle.com/es/torriden-s%C3%A9rum-de-%C3%A1cido/info.html/pid.1115692618" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0153126832.webp" alt="Beauty of Joseon Sérum">
+                  <div class="contenido-producto">
+                    <h4>Beauty of Joseon Sérum</h4>
+                    <a href="https://www.yesstyle.com/es/beauty-of-joseon-s%C3%A9rum/info.html/pid.1103112976" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Protectores Solares -->
+          <div class="slider-container">
+            <h4>Protectores Solares</h4>
+            <div class="contenedor-slider">
+              <div class="envoltura-slider">
+                <div class="tarjeta-producto">
+                  <img src="img/seca/L_p0199365446.webp" alt="Iunik Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Iunik Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/iunik-protector-solar-centella-calming-daily-sunscreen-mini-15ml/info.html/pid.1124583070" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0112606495.webp" alt="Abib Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Abib Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/abib-protector-solar-en-barra-quick-sunstick-protection-bar-22g/info.html/pid.1133641486" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+                <div class="tarjeta-producto">
+                  <img src="img/seca/XXL_p0175333259.webp" alt="Skin1004 Protector Solar">
+                  <div class="contenido-producto">
+                    <h4>Skin1004 Protector Solar</h4>
+                    <a href="https://www.yesstyle.com/es/skin-1004-protector/info.html/pid.1113888108" target="_blank">Ver Producto</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
       </div>
     </div>
   </section>
   
-  
-  
+  <section id="acerca" class="aparecer">
 
+  <div class="team-section">
+    <h2>Nuestro Equipo</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 1" />
+        <h3>Oscar</h3>
+        <p>Fundador</p>
+      </div>
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 2" />
+        <h3>Alejandro</h3>
+        <p>Desarrollador</p>
+      </div>
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 3" />
+        <h3>Angel</h3>
+        <p>Diseñador</p>
+      </div>
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 4" />
+        <h3>Uriel</h3>
+        <p>Especialista en Marketing</p>
+      </div>
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 5" />
+        <h3>Emiliano</h3>
+        <p>Soporte Técnico</p>
+      </div>
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 6" />
+        <h3>Amaurany</h3>
+        <p>Experta en skincare</p>
+      </div>
+      <div class="team-member">
+        <img src="img/hombre.jpg" alt="Miembro 7" />
+        <h3>Itzamar</h3>
+        <p>Experta en skincare</p>
+      </div>
+    </div>
+  </div>
+  </section>
     <!-- SECCIÓN RETROALIMENTACIÓN -->
     <section id="retroalimentacion" class="aparecer">
       <div class="contenedor contenedor-retroalimentacion">
