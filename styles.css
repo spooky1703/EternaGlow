@@ -771,32 +771,24 @@
     }
   }
   
+/* ==============================
+   RESPONSIVE PARA iPhone 13 (390px)
+============================== */
+
 @media (max-width: 390px) {
-  .slider-seccion h2 {
-    font-size: 1.6rem;
-  }
-
-  .leyenda {
-    font-size: 0.8rem;
-    padding: 3px 8px;
-    top: 5px;
-    left: 5px;
-  }
-
   .grupo-slider {
     gap: 6px;
-    justify-content: flex-start;
     padding: 0 10px;
+    justify-content: flex-start; /* Alinear las tarjetas al principio */
   }
 
   .tarjeta-producto {
-    width: 130px;
-    height: auto;
-    border-radius: 10px;
+    flex: 0 0 calc(85% - 10px); /* Tarjeta más ancha para mejor visibilidad */
+    max-width: 250px;
   }
 
   .tarjeta-producto img {
-    height: 120px;
+    height: 160px; /* Imagen un poco más pequeña para móviles */
   }
 
   .contenido-producto {
@@ -813,19 +805,5 @@
 
   .contenido-producto a {
     font-size: 0.75rem;
-  }
-
-  .boton-slider {
-    width: 30px;
-    height: 30px;
-    font-size: 0.9rem;
-  }
-
-  .boton-slider.anterior {
-    left: 5px;
-  }
-
-  .boton-slider.siguiente {
-    right: 5px;
   }
 }
