@@ -623,6 +623,48 @@
     font-size: 1.2rem;
   }
   
+  /* Filtros */
+.filtros-piel {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .boton-filtro {
+    background: var(--secundario);
+    border: 2px solid var(--acento);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .boton-filtro.activo {
+    background: var(--acento);
+    color: white;
+  }
+  
+  /* Categorías */
+  .categoria-piel {
+    display: none;
+  }
+  
+  .categoria-piel.activo {
+    display: block;
+  }
+  
+  .slider-container {
+    margin: 3rem 0;
+  }
+  
+  .slider-container h4 {
+    color: var(--oscuro);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--acento);
+  }
   /* FORMULARIO DE CONTACTO */
   #formulario-contacto {
     max-width: 600px;
